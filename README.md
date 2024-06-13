@@ -5,7 +5,7 @@ this is a simple weather app , it shows the current weather and a five days fore
 ## Demo
 Here is a quick demo of the app:
 
-!App Demo
+![](https://github.com/walaa-arebi/weather_app/blob/main/Screenrecorder.gif)
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
