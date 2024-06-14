@@ -112,35 +112,36 @@ class _CurrentWeatherWidgetState extends State<CurrentWeatherWidget> {
   }
 
   Widget buildHumidityWindWidget(Size screenSize) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(widget.weatherEntity.humidity.toString(),
-            style: TextStyle(
-              fontSize: screenSize.height * 0.02,
-            )),
-        const SizedBox(
-          width: 10,
-        ),
-        Image.asset(
-          "assets/images/humidity.png",
-          height: screenSize.height * 0.04,
-        ),
-        const SizedBox(
-          width: 70,
-        ),
-        Text(widget.weatherEntity.windSpeed.toString(),
-            style: TextStyle(
-              fontSize: screenSize.height * 0.02,
-            )),
-        const SizedBox(
-          width: 10,
-        ),
-        Image.asset(
-          "assets/images/wind.png",
-          height: screenSize.height * 0.04,
-        ),
-      ],
+    return Padding(
+      padding : EdgeInsets.symmetric(horizontal: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("Humidity ${widget.weatherEntity.humidity} %",
+              style: TextStyle(
+                fontSize: screenSize.height * 0.02,
+              )),
+          const SizedBox(
+            width: 10,
+          ),
+          Image.asset(
+            "assets/images/humidity.png",
+            height: screenSize.height * 0.04,
+          ),
+          const Spacer(),
+          Text("Wind ${widget.weatherEntity.windSpeed} km/hr",
+              style: TextStyle(
+                fontSize: screenSize.height * 0.02,
+              )),
+          const SizedBox(
+            width: 10,
+          ),
+          Image.asset(
+            "assets/images/wind.png",
+            height: screenSize.height * 0.04,
+          ),
+        ],
+      ),
     );
   }
 
